@@ -3,6 +3,7 @@ import { StyleSheet, TouchableOpacity, Button, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
+import Home from './screens/HomeScreen';
 import Report1 from './screens/UploadReport1';
 import Report2 from './screens/UploadReport2';
 import Report3 from './screens/UploadReport3';
@@ -19,15 +20,14 @@ function App() {
     <NavigationContainer>
 
       <Stack.Navigator>
-        {/* <Stack.Screen name="Home" component={HomeScreen}
+        <Stack.Screen name="Home" component={Home}
           options={({ navigation, route }) => ({
             title: '',
             headerStyle: {
-              backgroundColor: '#47A7AB',
-              height: 90
+              height: 0
             },
           })}
-        /> */}
+        />
 
         <Stack.Screen name="Report1" component={Report1}
           options={() => ({
